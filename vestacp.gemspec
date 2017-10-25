@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vestacp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "vestacp"
+  spec.name          = "vestacontrolpanel"
   spec.version       = Vestacp::VERSION
-  spec.authors       = ["Dmitry Knyazev"]
-  spec.email         = ["a@kdas.me"]
+  spec.authors       = ["Umut ADALI","Dmitry Knyazev"]
+  spec.email         = ["kobeumut@gmail.com"]
   spec.summary       = %q{VestaCP API bindings}
   spec.description   = %q{Developed and tested on version 0.9.8-14. Only to do simple things with user accounts. That's not a problem to make them more complicated :)}
   spec.homepage      = ""
@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "faraday", ">= 0"
+  spec.add_runtime_dependency "faraday", "~> 0.13.1"
 
-  spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler", ">= 1.15.4"
+  spec.add_development_dependency "rake", ">= 12.2.1"
 end
