@@ -26,7 +26,7 @@ module Vestacp
         args = {
             username: 'arg1',
             db_name: 'arg2',
-            db_name: 'arg3',
+            db_user: 'arg3',
             db_pass: 'arg4'
         }
         params = {}
