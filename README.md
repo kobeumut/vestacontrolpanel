@@ -7,7 +7,7 @@ VestaCP API bindings on ruby. For now, only with user accounts, but that's simpl
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'vestacp'
+gem 'vestacp2'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install vestacp
+    $ gem install vestacp2
 
 ## Usage
 

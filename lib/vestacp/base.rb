@@ -12,7 +12,7 @@ module Vestacp
     #
     # All other paramters are passed along as HTTP POST variables
     def self.send_request(params = {}, raw = {}, json_response = false)
-      if params[:cmd].blank?
+      if params[:cmd].nil? || params[:cmd].empty?
         raise "No API command set"
       end
 

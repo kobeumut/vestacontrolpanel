@@ -3,7 +3,9 @@ require "vestacp/version"
 module Vestacp
   autoload :Config,  "vestacp/config"
   autoload :Base,  "vestacp/base"
+  autoload :Database,  "vestacp/database"
   autoload :Account,  "vestacp/account"
+  autoload :Domain,  "vestacp/domain"
 
   class << self
     attr_accessor :config

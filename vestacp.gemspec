@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vestacp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "vestacontrolpanel"
+  spec.name          = "vestacp2"
   spec.version       = Vestacp::VERSION
   spec.authors       = ["Umut ADALI","Dmitry Knyazev"]
   spec.email         = ["kobeumut@gmail.com"]
@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "faraday", "~> 0.13.1"
 
-  spec.add_development_dependency "bundler", ">= 1.15.4"
-  spec.add_development_dependency "rake", ">= 12.2.1"
+  spec.add_development_dependency 'bundler', '~> 1.15', '>= 1.15.4'
+  spec.add_development_dependency 'rake', '~> 12.2', '>= 12.2.1'
 end
