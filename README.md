@@ -1,13 +1,21 @@
 # Vestacp
 
-VestaCP API bindings on ruby. For now, only with user accounts, but that's simple — to make it work with another api functions.
+VestaCP API bindings on ruby. For now, only with user accounts, domain, database but that's simple — to make it work with another api functions. 
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'vestacp2'
+require 'vestacp'
+require 'uri'
+     Vestacp.configure do |config|
+       config.api_username = 'admin'
+       config.api_password = '123456'
+       config.api_url      = 'https://64.141.159.30:8083/api/'
+     end
+    puts Vestacp::Domain.add({username:'admin',domain:'yeni.com'})
+    puts Vestacp::Account.add({username: 'asd',password: 'arg2',email: 'arg3',package: 'arg4',first_name: 'arg5',last_name: 'arg6'})
 ```
 
 And then execute:
@@ -82,14 +90,18 @@ will return
      "LANGUAGE"=>"en",
      "HOME"=>"/home/admin",
      "TIME"=>"06:03:09",
-     "DATE"=>"2015-07-18"}}}
+     "DATE"=>"2017-07-18"}}}
 ```
+## TODO
+More API support will be provided.
 
-etc..
+For now, adding, removing, suspend, unsuspend, check credentials, information for customers
+Domain add and delete,
+Database add and delete,
 
 ## Contributing
 
-1. Fork it ( https://github.com/okdas/vestacp/fork )
+1. Fork it ( https://github.com/kobeumut/vestacontrolpanel/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
